@@ -28,7 +28,7 @@ class _QuoteListState extends State<QuoteList> {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
-        title: const Text('Delete quote?'),
+        title: const Text('Are you sure?'),
         content: const Text('This cannot be undone.'),
 
         actions: [
@@ -46,7 +46,7 @@ class _QuoteListState extends State<QuoteList> {
               Navigator.pop(context);
               setState(() => quotes.remove(quote));
             }, 
-            child: const Text('Delete')
+            child: const Text('Confirm')
           ),
         ],
       ),
